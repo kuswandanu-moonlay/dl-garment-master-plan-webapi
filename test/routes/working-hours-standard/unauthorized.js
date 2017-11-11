@@ -1,4 +1,4 @@
 var unauthorizedTest = require("../unauthorized-test-factory");
 unauthorizedTest({
-    uri: "/weekly-plans"
+    uri: "/working-hours-standards"
 });
