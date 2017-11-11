@@ -1,4 +1,4 @@
-var basicTest = require("../../basic-test-factory");
+var basicTest = require("../basic-test-factory");
 basicTest({
     uri: "/weekly-plans",
     model: require("dl-models").garmentMasterPlan.WeeklyPlan,

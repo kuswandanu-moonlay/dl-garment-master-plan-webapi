@@ -41,4 +41,7 @@ describe('@dl-garment-master-plan-webapi', function () {
     this.timeout(2 * 60000); 
     //Weekly Plan
     test("/v1/weekly-plan", "./routes/weekly-plan");
+
+    //Working Hours Standard
+    test("/v1/working-hours-standard", "./routes/working-hours-standard");
 });
