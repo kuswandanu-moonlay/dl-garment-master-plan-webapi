@@ -1,5 +1,5 @@
 const apiVersion = '1.0.0';
-var Manager = require("dl-module").managers.garmentMasterPlan.WeeklyPlanManager;
+var Manager = require("dl-module").managers.garmentMasterPlan.StyleManager;
 var JwtRouterFactory = require("../../jwt-router-factory");
 
 function getRouter() {
