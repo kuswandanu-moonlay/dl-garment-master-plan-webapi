@@ -3,6 +3,7 @@ var v1WeeklyPlanByUserRouter = require("../src/routers/v1/weekly-plan/weekly-pla
 var v1WeeklyPlanRouter = require("../src/routers/v1/weekly-plan/weekly-plan-router");
 var v1WorkingHoursStandardRouter = require("../src/routers/v1/working-hours-standard/working-hours-standard-router");
 var v1StyleRouter = require("../src/routers/v1/style/style-router");
+var v1StandardHourRouter = require("../src/routers/v1/standard-hour/standard-hour-router");
 module.exports = function (server) {
     //WEEKLY PLAN
     v1WeeklyPlanByUserRouter().applyRoutes(server,  "/weekly-plans/by-user");
@@ -13,5 +14,8 @@ module.exports = function (server) {
 
     //STYLE
     v1StyleRouter().applyRoutes(server,        "/styles");
+    
+    //STYLE
+    v1StandardHourRouter().applyRoutes(server,        "/standard-hours");
 
 }
