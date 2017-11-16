@@ -46,4 +46,6 @@ describe('@dl-garment-master-plan-webapi', function () {
     test("/v1/working-hours-standard", "./routes/working-hours-standard");
     //Style
     test("/v1/style", "./routes/style");
+    //Standard hour
+    test("/v1/standard-hour", "./routes/standard-hour");
 });
