@@ -13,6 +13,8 @@ var v1StandardHourByStyleRouter = require("../src/routers/v1/standard-hour/stand
 var v1BookingOrderRouter = require("../src/routers/v1/booking-order/booking-order-router");
 var v1BookingOrderPostRouter = require("../src/routers/v1/booking-order/booking-order-post-router");
 
+var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity/master-plan-comodity-router");
+
 module.exports = function (server) {
     //WEEKLY PLAN
     v1WeeklyPlanByUserRouter().applyRoutes(server,  "/weekly-plans/by-user");
@@ -32,4 +34,8 @@ module.exports = function (server) {
     //BOOKING ORDER
     v1BookingOrderRouter().applyRoutes(server,                       "/booking-orders");
     v1BookingOrderPostRouter().applyRoutes(server,                   "/booking-orders-post");
+
+    //MASTER PLAN COMODITY
+    v1MasterPlanComodityRouter().applyRoutes(server,                   "/master-plan-comodities");
+
 }
