@@ -14,7 +14,7 @@ function getRouter(){
 
             var data = request.body;
 
-            manager.post(data)
+            manager.cancelBooking(data)
                 .then(docId => {
                     response.header('Location', `${docId.toString()}`);
                     var result = resultFormatter.ok(apiVersion, 201);
