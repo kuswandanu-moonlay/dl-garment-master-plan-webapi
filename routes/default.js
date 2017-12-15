@@ -11,7 +11,7 @@ var v1StandardHourRouter = require("../src/routers/v1/standard-hour/standard-hou
 var v1StandardHourByStyleRouter = require("../src/routers/v1/standard-hour/standard-hour-by-style-router");
 
 var v1BookingOrderRouter = require("../src/routers/v1/booking-order/booking-order-router");
-var v1BookingOrderPostRouter = require("../src/routers/v1/booking-order/booking-order-post-router");
+var v1BookingOrderCancelRouter = require("../src/routers/v1/booking-order/booking-order-cancel-router");
 
 var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity/master-plan-comodity-router");
 
@@ -33,7 +33,7 @@ module.exports = function (server) {
 
     //BOOKING ORDER
     v1BookingOrderRouter().applyRoutes(server,                       "/booking-orders");
-    v1BookingOrderPostRouter().applyRoutes(server,                   "/booking-orders-post");
+    v1BookingOrderCancelRouter().applyRoutes(server,                   "/booking-orders-cancel");
 
     //MASTER PLAN COMODITY
     v1MasterPlanComodityRouter().applyRoutes(server,                   "/master-plan-comodities");
