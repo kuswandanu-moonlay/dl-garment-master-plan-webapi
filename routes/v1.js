@@ -15,26 +15,31 @@ var v1BookingOrderCancelRouter = require("../src/routers/v1/booking-order/bookin
 
 var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity/master-plan-comodity-router");
 
+var v1MasterPlanRouter = require("../src/routers/v1/master-plan/master-plan-router");
+
 module.exports = function (server) {
     //WEEKLY PLAN
-    v1WeeklyPlanByUserRouter().applyRoutes(server,            "/v1/weekly-plans/by-user");
-    v1WeeklyPlanRouter().applyRoutes(server,                  "/v1/weekly-plans");
-    v1WeeklyPlanByYearRouter().applyRoutes(server,            "/v1/weekly-plans-by-year");
+    v1WeeklyPlanByUserRouter().applyRoutes(server,	        "/v1/weekly-plans/by-user");
+    v1WeeklyPlanRouter().applyRoutes(server,	            "/v1/weekly-plans");
+    v1WeeklyPlanByYearRouter().applyRoutes(server,	        "/v1/weekly-plans-by-year");
 
     //WORKING HOURS STANDARD
-    v1WorkingHoursStandardRouter().applyRoutes(server,        "/v1/working-hours-standards");
+    v1WorkingHoursStandardRouter().applyRoutes(server,	    "/v1/working-hours-standards");
 
     //STYLE
-    v1StyleRouter().applyRoutes(server,                       "/v1/styles");
+    v1StyleRouter().applyRoutes(server,	                    "/v1/styles");
     
     //STANDARD HOUR
-    v1StandardHourRouter().applyRoutes(server,                       "/v1/standard-hours");
-    v1StandardHourByStyleRouter().applyRoutes(server,                       "/v1/standard-hours-by-style");
+    v1StandardHourRouter().applyRoutes(server,	            "/v1/standard-hours");
+    v1StandardHourByStyleRouter().applyRoutes(server,	    "/v1/standard-hours-by-style");
 
     //BOOKING ORDER
-    v1BookingOrderRouter().applyRoutes(server,                       "/v1/booking-orders");
-    v1BookingOrderCancelRouter().applyRoutes(server,                   "/v1/booking-orders-cancel");
+    v1BookingOrderRouter().applyRoutes(server,	            "/v1/booking-orders");
+    v1BookingOrderCancelRouter().applyRoutes(server,	    "/v1/booking-orders-cancel");
     
     //MASTER PLAN COMODITY
-    v1MasterPlanComodityRouter().applyRoutes(server,                 "/v1/master-plan-comodities");
+    v1MasterPlanComodityRouter().applyRoutes(server,	    "/v1/master-plan-comodities");
+    
+    //MASTER PLAN
+    v1MasterPlanRouter().applyRoutes(server,	            "/v1/master-plans");
 }
