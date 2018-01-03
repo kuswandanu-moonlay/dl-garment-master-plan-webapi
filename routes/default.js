@@ -16,6 +16,7 @@ var v1BookingOrderCancelRouter = require("../src/routers/v1/booking-order/bookin
 var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity/master-plan-comodity-router");
 
 var v1MasterPlanRouter = require("../src/routers/v1/master-plan/master-plan-router");
+var v1MasterPlanPreviewRouter = require("../src/routers/v1/master-plan/master-plan-preview-router");
 
 module.exports = function (server) {
     //WEEKLY PLAN
@@ -42,5 +43,6 @@ module.exports = function (server) {
 
     //MASTER PLAN
     v1MasterPlanRouter().applyRoutes(server,	            "/master-plans");
+    v1MasterPlanPreviewRouter().applyRoutes(server,	        "/master-plan-previews");
 
 }
