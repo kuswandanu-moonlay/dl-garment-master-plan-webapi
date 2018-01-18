@@ -22,8 +22,12 @@
                 "POWERBI_ACCESS_KEY": "DLDEVELOPMENT",
                 // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.4.dblayer.com:17961/danliris-prd?ssl=true"
                 //   "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-uat?ssl=true"
-                "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-dev?ssl=true"
+
+                // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-dev?ssl=true"
+
                 // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-uat?ssl=true"
+
+                "DB_CONNECTIONSTRING" : "mongodb://danu:unad@ds249707.mlab.com:49707/dl?authSource=dl"
             },
             "externalConsole": false,
             "sourceMaps": false,
@@ -68,7 +72,8 @@
                 "AUTH_SECRET": "DLDEVELOPMENT",
                 "POWERBI_ACCESS_KEY": "DLDEVELOPMENT",
                 "DB_CONNECTIONSTRING": "mongodb://app:Admin-pwd@ds139985.mlab.com:39985/dl-unit-test"
-            }
+            },
+            "request": "launch"
         },
         {
             "name": "Attach to Process",

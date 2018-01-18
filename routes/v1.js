@@ -20,6 +20,8 @@ var v1MasterPlanRouter = require("../src/routers/v1/master-plan/master-plan-rout
 var v1MasterPlanPreviewRouter = require("../src/routers/v1/master-plan/master-plan-preview-router");
 var v1MasterPlanByBookingOrderNoRouter = require("../src/routers/v1/master-plan/master-plan-by-booking-order-router");
 
+var v1MasterYarnTypeRouter = require("../src/routers/v1/master-yarn-type/master-yarn-type-router");
+
 module.exports = function (server) {
     //WEEKLY PLAN
     v1WeeklyPlanByUserRouter().applyRoutes(server,	        "/v1/weekly-plans/by-user");
@@ -47,4 +49,7 @@ module.exports = function (server) {
     v1MasterPlanRouter().applyRoutes(server,	            "/v1/master-plans");
     v1MasterPlanPreviewRouter().applyRoutes(server,	        "/v1/master-plan-previews");
     v1MasterPlanByBookingOrderNoRouter().applyRoutes(server,                "/v1/master-plans-by-booking-order");
+
+    //MASTER YARN TYPE
+    v1MasterYarnTypeRouter().applyRoutes(server,	            "/v1/master-yarn-types");
 }

@@ -47,7 +47,9 @@ describe('@dl-garment-master-plan-webapi', function () {
     // //Style
     // test("/v1/style", "./routes/style");
     //Standard hour
-    //test("/v1/standard-hour", "./routes/standard-hour");
+    test("/v1/standard-hour", "./routes/standard-hour");
     //Standard hour
-    test("/v1/master-plan", "./routes/master-plan");
+    // test("/v1/master-plan", "./routes/master-plan");
+    // Master Yarn Type
+    // test("/v1/master-yarn-type", "./routes/master-yarn-type");
 });
