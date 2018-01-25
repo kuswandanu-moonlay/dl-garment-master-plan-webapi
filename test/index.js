@@ -39,15 +39,23 @@ before("initialize server", function(done) {
 
 describe('@dl-garment-master-plan-webapi', function () {
     this.timeout(2 * 60000); 
+     
     // //Weekly Plan
     // test("/v1/weekly-plan", "./routes/weekly-plan");
 
     // //Working Hours Standard
     // test("/v1/working-hours-standard", "./routes/working-hours-standard");
+
     // //Style
     // test("/v1/style", "./routes/style");
+
     //Standard hour
     //test("/v1/standard-hour", "./routes/standard-hour");
+
     //Standard hour
-    test("/v1/master-plan", "./routes/master-plan");
+    // test("/v1/master-plan", "./routes/master-plan");
+
+    //Garment Section
+    test("/v1/garment-sections", "./routes/garment-section");
+    
 });
