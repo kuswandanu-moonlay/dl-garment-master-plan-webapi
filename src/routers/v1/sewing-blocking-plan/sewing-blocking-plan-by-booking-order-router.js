@@ -1,6 +1,6 @@
 var Router = require('restify-router').Router;
 var db = require("../../../db");
-var Manager = require("dl-module").managers.garmentMasterPlan.MasterPlanManager;
+var Manager = require("dl-module").managers.garmentMasterPlan.SewingBlockingPlanManager;
 var resultFormatter = require("../../../result-formatter");
 var passport = require('../../../passports/jwt-passport');
 const apiVersion = '1.0.0';
