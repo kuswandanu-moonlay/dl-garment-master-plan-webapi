@@ -8,16 +8,16 @@ var v1WorkingHoursStandardRouter = require("../src/routers/v1/working-hours-stan
 var v1StyleRouter = require("../src/routers/v1/style/style-router");
 
 var v1StandardHourRouter = require("../src/routers/v1/standard-hour/standard-hour-router");
-var v1StandardHourByStyleRouter = require("../src/routers/v1/standard-hour/standard-hour-by-style-router");
+var v1StandardHourByBuyerComodityRouter = require("../src/routers/v1/standard-hour/standard-hour-by-buyer-comodity-router");
 
 var v1BookingOrderRouter = require("../src/routers/v1/booking-order/booking-order-router");
 var v1BookingOrderCancelRouter = require("../src/routers/v1/booking-order/booking-order-cancel-router");
 
 var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity/master-plan-comodity-router");
 
-var v1MasterPlanRouter = require("../src/routers/v1/master-plan/master-plan-router");
-var v1MasterPlanPreviewRouter = require("../src/routers/v1/master-plan/master-plan-preview-router");
-var v1MasterPlanByBookingOrderNoRouter = require("../src/routers/v1/master-plan/master-plan-by-booking-order-router");
+var v1SewingBlockingPlanRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-router");
+var v1SewingBlockingPlanPreviewRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-preview-router");
+var v1SewingBlockingPlanByBookingOrderNoRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-by-booking-order-router");
 
 module.exports = function (server) {
     //WEEKLY PLAN
@@ -33,7 +33,7 @@ module.exports = function (server) {
     
     //STANDARD HOUR
     v1StandardHourRouter().applyRoutes(server,	            "/v1/standard-hours");
-    v1StandardHourByStyleRouter().applyRoutes(server,	    "/v1/standard-hours-by-style");
+    v1StandardHourByBuyerComodityRouter().applyRoutes(server,	    "/v1/standard-hours-by-buyer-comodity");
 
     //BOOKING ORDER
     v1BookingOrderRouter().applyRoutes(server,	            "/v1/booking-orders");
@@ -43,7 +43,7 @@ module.exports = function (server) {
     v1MasterPlanComodityRouter().applyRoutes(server,	    "/v1/master-plan-comodities");
     
     //MASTER PLAN
-    v1MasterPlanRouter().applyRoutes(server,	            "/v1/master-plans");
-    v1MasterPlanPreviewRouter().applyRoutes(server,	        "/v1/master-plan-previews");
-    v1MasterPlanByBookingOrderNoRouter().applyRoutes(server,                "/v1/master-plans-by-booking-order");
+    v1SewingBlockingPlanRouter().applyRoutes(server,	            "/v1/sewing-blocking-plans");
+    v1SewingBlockingPlanPreviewRouter().applyRoutes(server,	        "/v1/sewing-blocking-plan-previews");
+    v1SewingBlockingPlanByBookingOrderNoRouter().applyRoutes(server,                "/v1/sewing-blocking-plans-by-booking-order");
 }
