@@ -14,8 +14,9 @@ function getRouter() {
                     "_updatedDate": -1
                 };
                 var filter = request.queryInfo.filter;
-                var styleCode = request.queryInfo.styleCode;
-                manager.getStandardHourByStyle(styleCode)
+                var buyerCode = filter.buyerCode;
+                var comodityCode = filter.comodityCode;
+                manager.getStandardHourByBuyerComodity(buyerCode,comodityCode)
                     .then(docs => {
                         var result = resultFormatter.ok(apiVersion, 200, docs.data);
                         delete docs.data;
