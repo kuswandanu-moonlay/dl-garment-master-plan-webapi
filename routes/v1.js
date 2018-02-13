@@ -2,6 +2,8 @@
 var v1WeeklyPlanByUserRouter = require("../src/routers/v1/weekly-plan/weekly-plan-by-user-router");
 var v1WeeklyPlanRouter = require("../src/routers/v1/weekly-plan/weekly-plan-router");
 var v1WeeklyPlanByYearRouter = require("../src/routers/v1/weekly-plan/weekly-plan-by-year-router");
+var v1WeeklyPlanYearRouter = require("../src/routers/v1/weekly-plan/weekly-plan-year-router");
+var v1WeeklyPlanMonitoringRemainingEHRouter = require("../src/routers/v1/weekly-plan/weekly-plan-monitoring-remaining-eh-router");
 var v1WeeklyPlanUnitRouter = require("../src/routers/v1/weekly-plan/weekly-plan-unit-router");
 
 var v1WorkingHoursStandardRouter = require("../src/routers/v1/working-hours-standard/working-hours-standard-router");
@@ -28,6 +30,8 @@ module.exports = function (server) {
     v1WeeklyPlanByUserRouter().applyRoutes(server, "/v1/weekly-plans/by-user");
     v1WeeklyPlanRouter().applyRoutes(server, "/v1/weekly-plans");
     v1WeeklyPlanByYearRouter().applyRoutes(server, "/v1/weekly-plans-by-year");
+    v1WeeklyPlanYearRouter().applyRoutes(server, "/v1/weekly-plan-years");
+    v1WeeklyPlanMonitoringRemainingEHRouter().applyRoutes(server, "/v1/weekly-plans-monitoring-remaining-eh")
     v1WeeklyPlanUnitRouter().applyRoutes(server,	"/v1/weekly-plan-units");
 
     //WORKING HOURS STANDARD
