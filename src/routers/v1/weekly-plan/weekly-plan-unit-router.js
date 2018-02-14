@@ -12,7 +12,7 @@ function getRouter() {
                 var manager = new Manager(db, request.user);
                 var filter = request.queryInfo.filter;
                 var keyword = request.queryInfo.keyword;
-                manager.collection.distinct( "unit" )
+                manager.getUnit(keyword, filter)
                     .then(docs => {
                         var result = resultFormatter.ok(apiVersion, 200, docs.data);
                         delete docs.data;
