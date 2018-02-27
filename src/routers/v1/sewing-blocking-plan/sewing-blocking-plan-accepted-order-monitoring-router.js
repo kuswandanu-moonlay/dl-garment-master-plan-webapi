@@ -23,7 +23,7 @@ function getRouter() {
         getManager(user)
             .then((manager) => {
                 Manager = manager;
-                return Manager.getMonitoringOrder(query);
+                return Manager.getAcceptedOrderMonitoring(query);
             })
             .then(docs => {
                 var result = resultFormatter.ok(apiVersion, 200, docs);
@@ -34,7 +34,7 @@ function getRouter() {
                     response.send(result.statusCode, result);
                 }
                 else{
-                    Manager.getMonitoringOrderXls(result, query)
+                    Manager.getAcceptedOrderMonitoringXls(result, query)
                         .then(xls => {
                             response.xls(xls.name, xls.data, xls.options)
                         });
