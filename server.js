@@ -13,6 +13,9 @@ function server() {
         var json2xls = require('json2xls');
         server.use(json2xls.middleware);
 
+        var excel_export = require('./utils/excel-export');
+        server.use(excel_export);
+
         server.use(restify.queryParser());
         server.use(restify.bodyParser());
         server.use(restify.CORS({
