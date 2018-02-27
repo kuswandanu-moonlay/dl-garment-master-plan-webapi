@@ -26,7 +26,7 @@ function getRouter() {
                 else{
                     manager.getXls(result, request.queryInfo)
                         .then(xls => {
-                            response.xls(xls.name, xls.data, xls.options)
+                            response.xlsx(xls.name, xls.data, xls.options)
                         });
                 }
             })
