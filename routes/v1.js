@@ -26,6 +26,8 @@ var v1SewingBlockingPlanByBookingOrderNoRouter = require("../src/routers/v1/sewi
 
 var v1GarmentSectionRouter = require("../src/routers/v1/garment-section/garment-section-router");
 
+var v1SewingBlockingPlanAcceptedOrderMonitoring = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-accepted-order-monitoring-router");
+
 module.exports = function (server) {
     //WEEKLY PLAN
     v1WeeklyPlanByUserRouter().applyRoutes(server, "/v1/weekly-plans/by-user");
@@ -57,6 +59,8 @@ module.exports = function (server) {
     v1SewingBlockingPlanRouter().applyRoutes(server,	            "/v1/sewing-blocking-plans");
     //v1SewingBlockingPlanPreviewRouter().applyRoutes(server,	        "/v1/sewing-blocking-plan-previews");
     v1SewingBlockingPlanByBookingOrderNoRouter().applyRoutes(server,                "/v1/sewing-blocking-plans-by-booking-order");
+    v1SewingBlockingPlanAcceptedOrderMonitoring().applyRoutes(server,            "/v1/sewing-blocking-plans-accepted-order-monitoring");
+
     v1SewingBlockingPlanMonitoringRouter().applyRoutes(server,	            "/v1/sewing-blocking-plan-monitoring");
     //GARMENT SECTION
     v1GarmentSectionRouter().applyRoutes(server, "/v1/garment-sections");

@@ -18,7 +18,7 @@
                 "NODE_ENV": "development",
                 "IP": "127.0.0.1",
                 "PORT": "9030",
-                "AUTH_SECRET": "DANLIRISDEVELOPMENT",
+                "AUTH_SECRET": "DLDEVELOPMENT",
                 "POWERBI_ACCESS_KEY": "DLDEVELOPMENT",
                 // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.4.dblayer.com:17961/danliris-prd?ssl=true"
                 //   "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-uat?ssl=true"
