@@ -21,6 +21,7 @@ var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity
 
 var v1SewingBlockingPlanRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-router");
 //var v1SewingBlockingPlanPreviewRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-preview-router");
+var v1SewingBlockingPlanMonitoringRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-monitoring-router");
 var v1SewingBlockingPlanByBookingOrderNoRouter = require("../src/routers/v1/sewing-blocking-plan/sewing-blocking-plan-by-booking-order-router");
 
 var v1GarmentSectionRouter = require("../src/routers/v1/garment-section/garment-section-router");
@@ -60,6 +61,7 @@ module.exports = function (server) {
     v1SewingBlockingPlanByBookingOrderNoRouter().applyRoutes(server,                "/v1/sewing-blocking-plans-by-booking-order");
     v1SewingBlockingPlanAcceptedOrderMonitoring().applyRoutes(server,            "/v1/sewing-blocking-plans-accepted-order-monitoring");
 
+    v1SewingBlockingPlanMonitoringRouter().applyRoutes(server,	            "/v1/sewing-blocking-plan-monitoring");
     //GARMENT SECTION
     v1GarmentSectionRouter().applyRoutes(server, "/v1/garment-sections");
     
