@@ -1,30 +1,20 @@
 var Router = require('restify-router').Router;
 var db = require("../../../db");
-var Manager = require("dl-module").managers.garmentMasterPlan.WeeklyPlanManager;
+var Manager = require("dl-module").managers.garmentMasterPlan.SewingBlockingPlanManager;
 var resultFormatter = require("../../../result-formatter");
 var passport = require('../../../passports/jwt-passport');
 const apiVersion = '1.0.0';
 
 function getRouter() {
-
-    var getManager = (user) => {
-        return db.get()
-            .then((db) => {
-                return Promise.resolve(new Manager(db, user));
-            });
-    };
-
     var router = new Router();
-    router.get("/", passport, function (request, response, next) {
-        var user = request.user;
-        var query = request.query;
-     
-        var Manager = {};
-        getManager(user)
-            .then((manager) => {
-                Manager = manager;
-                return Manager.getMonitoringRemainingEH(query);
-            })
+    router.get("/", passport, function(request, response, next) {
+        db.get().then(db => {
+                var manager = new Manager(db, request.user);
+                var sorting = {
+                    "_updatedDate": -1
+                };
+              
+            manager.getReport( request.queryInfo)
             .then(docs => {
                 var result = resultFormatter.ok(apiVersion, 200, docs);
                 return Promise.resolve(result);
@@ -34,7 +24,7 @@ function getRouter() {
                     response.send(result.statusCode, result);
                 }
                 else{
-                    Manager.getMonitoringRemainingEHXls(result, query)
+                    manager.getXls(result, request.queryInfo)
                         .then(xls => {
                             response.xlsx(xls.name, xls.data, xls.options)
                         });
@@ -48,7 +38,9 @@ function getRouter() {
                 response.send(statusCode, error);
             });
     });
+});
     return router;
 }
+
 
 module.exports = getRouter;
