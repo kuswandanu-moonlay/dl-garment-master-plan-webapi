@@ -36,7 +36,7 @@ function getRouter() {
                 else{
                     Manager.getMonitoringRemainingEHXls(result, query)
                         .then(xls => {
-                            response.xls(xls.name, xls.data, xls.options)
+                            response.xlsx(xls.name, xls.data, xls.options)
                         });
                 }
             })
