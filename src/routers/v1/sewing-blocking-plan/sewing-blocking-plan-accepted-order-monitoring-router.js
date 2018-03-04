@@ -1,6 +1,6 @@
 var Router = require('restify-router').Router;
 var db = require("../../../db");
-var Manager = require("dl-module").managers.garmentMasterPlan.WeeklyPlanManager;
+var Manager = require("dl-module").managers.garmentMasterPlan.SewingBlockingPlanManager;
 var resultFormatter = require("../../../result-formatter");
 var passport = require('../../../passports/jwt-passport');
 const apiVersion = '1.0.0';
@@ -23,7 +23,7 @@ function getRouter() {
         getManager(user)
             .then((manager) => {
                 Manager = manager;
-                return Manager.getMonitoringRemainingEH(query);
+                return Manager.getAcceptedOrderMonitoring(query);
             })
             .then(docs => {
                 var result = resultFormatter.ok(apiVersion, 200, docs);
@@ -34,9 +34,9 @@ function getRouter() {
                     response.send(result.statusCode, result);
                 }
                 else{
-                    Manager.getMonitoringRemainingEHXls(result, query)
+                    Manager.getAcceptedOrderMonitoringXls(result, query)
                         .then(xls => {
-                            response.xlsx(xls.name, xls.data, xls.options)
+                            response.xls(xls.name, xls.data, xls.options)
                         });
                 }
             })
