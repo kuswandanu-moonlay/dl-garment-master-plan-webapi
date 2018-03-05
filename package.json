@@ -7,10 +7,6 @@
       "test": "mocha test/index.js",
       "start": "node index.js"
     },
-    "engines": {
-      "node": "6.3.0",
-      "npm": "3.10.9"
-    },
     "repository": {
       "type": "git",
       "url": "git+https://github.com/danliris/dl-purchasing-webapi.git"
