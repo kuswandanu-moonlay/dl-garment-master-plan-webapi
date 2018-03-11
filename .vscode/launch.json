@@ -18,7 +18,7 @@
                 "NODE_ENV": "development",
                 "IP": "127.0.0.1",
                 "PORT": "9030",
-                "AUTH_SECRET": "DLDEVELOPMENT",
+                "AUTH_SECRET": "DANLIRISDEVELOPMENT",
                 "POWERBI_ACCESS_KEY": "DLDEVELOPMENT",
                 // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.4.dblayer.com:17961/danliris-prd?ssl=true"
                 //   "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-uat?ssl=true"
@@ -27,7 +27,7 @@
 
                 // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-uat?ssl=true"
 
-                "DB_CONNECTIONSTRING" : "mongodb://danu:unad@ds249707.mlab.com:49707/dl?authSource=dl"
+                "DB_CONNECTIONSTRING" : "mongodb://danu:unad@ds012538.mlab.com:12538/dl?authSource=dl"
                 // "DB_CONNECTIONSTRING" : "mongodb://danu:unad@ds111568.mlab.com:11568/dl-empty"
             },
             "externalConsole": false,
