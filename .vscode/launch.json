@@ -27,7 +27,7 @@
 
                 // "DB_CONNECTIONSTRING": "mongodb://danliris:Standar123@sl-us-dal-9-portal.3.dblayer.com:15500/dl-uat?ssl=true"
 
-                "DB_CONNECTIONSTRING" : "mongodb://danu:unad@ds012538.mlab.com:12538/dl?authSource=dl"
+                "DB_CONNECTIONSTRING" : "mongodb://danu:danu@ds012538.mlab.com:12538/dl?authSource=dl"
                 // "DB_CONNECTIONSTRING" : "mongodb://danu:unad@ds111568.mlab.com:11568/dl-empty"
             },
             "externalConsole": false,
