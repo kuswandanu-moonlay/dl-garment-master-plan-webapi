@@ -17,6 +17,7 @@ var v1BookingOrderRouter = require("../src/routers/v1/booking-order/booking-orde
 var v1BookingOrderCancelRouter = require("../src/routers/v1/booking-order/booking-order-cancel-router");
 var v1BookingOrderMonitoringRouter = require("../src/routers/v1/booking-order/booking-order-monitoring-router");
 var v1BookingOrderExpiredRouter = require("../src/routers/v1/booking-order/booking-order-expired-router");
+var v1BookingOrderCanceledMonitoringRouter = require("../src/routers/v1/booking-order/booking-order-canceled-monitoring-router");
 
 var v1MasterPlanComodityRouter = require("../src/routers/v1/master-plan-comodity/master-plan-comodity-router");
 
@@ -53,6 +54,7 @@ module.exports = function (server) {
     v1BookingOrderCancelRouter().applyRoutes(server, "/v1/booking-orders-cancel");
     v1BookingOrderMonitoringRouter().applyRoutes(server, "/v1/booking-orders-monitoring");
     v1BookingOrderExpiredRouter().applyRoutes(server, "/v1/booking-orders-expired");
+    v1BookingOrderCanceledMonitoringRouter().applyRoutes(server, "/v1/booking-orders-canceled-monitoring");
 
     //MASTER PLAN COMODITY
     v1MasterPlanComodityRouter().applyRoutes(server, "/v1/master-plan-comodities");
